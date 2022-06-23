@@ -54,18 +54,6 @@ class ViewModel {
         loadJson()
     }
     
-    public func testRequest() {
-        let request = AF.request(url)
-        
-        request.responseDecodable(of: View.self) { (response) in
-            guard let data = response.value else { return }
-            print(data)
-        }
-        request.responseDecodable(of: Data.self) { (response) in
-            guard let data = response.value else { return }
-            print(data)
-        }
-    }
     
 
 }

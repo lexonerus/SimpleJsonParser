@@ -19,13 +19,11 @@ class MainView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        bindViewModel()
-        viewModel.testRequest()
     }
     
     func setup() {
         viewModel.loadData()
-        
+        bindViewModel()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

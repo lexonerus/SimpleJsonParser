@@ -20,6 +20,7 @@ class MainView: UIViewController {
         super.viewDidLoad()
         setup()
         bindViewModel()
+        viewModel.testRequest()
     }
     
     func setup() {

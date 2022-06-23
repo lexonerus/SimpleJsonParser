@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct JsonData: Decodable {
+struct Responce: Decodable {
     
     let data: [dataItem]
     

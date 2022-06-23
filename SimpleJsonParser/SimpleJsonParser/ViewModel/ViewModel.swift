@@ -10,8 +10,8 @@ import Alamofire
 
 class ViewModel {
     private let url = "https://pryaniky.com/static/json/sample.json"
-    public var jsonData: JsonData?
-    var dataObject: [JsonData.dataItem]?
+    public var jsonData: Responce?
+    var dataObject: [Responce.dataItem]?
     var imageUrl        = Dynamic("")
     var labelText       = Dynamic("")
     var viewLabelText   = Dynamic("")
@@ -21,7 +21,7 @@ class ViewModel {
     private func loadJson() {
         let request = AF.request(url)
         
-        request.responseDecodable(of: JsonData.self) { (response) in
+        request.responseDecodable(of: Responce.self) { (response) in
             guard let data = response.value else { return }
             self.jsonData = data
             self.dataObject = data.data
@@ -52,6 +52,19 @@ class ViewModel {
     
     public func loadData() {
         loadJson()
+    }
+    
+    public func testRequest() {
+        let request = AF.request(url)
+        
+        request.responseDecodable(of: View.self) { (response) in
+            guard let data = response.value else { return }
+            print(data)
+        }
+        request.responseDecodable(of: Data.self) { (response) in
+            guard let data = response.value else { return }
+            print(data)
+        }
     }
     
 

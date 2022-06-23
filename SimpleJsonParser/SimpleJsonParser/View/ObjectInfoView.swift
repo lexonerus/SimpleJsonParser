@@ -15,7 +15,7 @@ class ObjectInfoView: UIViewController {
         
     var viewModel: ViewModel?
     var indexPath: Int?
-    var object: JsonData.dataItem?
+    var object: Responce.dataItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()

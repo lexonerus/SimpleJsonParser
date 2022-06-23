@@ -25,12 +25,9 @@ class ViewModel {
             guard let data = response.value else { return }
             self.jsonData = data
             self.dataObject = data.data
-            print()
-            print(self.dataObject)
             self.retrieveJsonObjects()
         }
     }
-    
     private func retrieveJsonObjects() {
         for i in 0...(jsonData!.data.count-1) {
             if jsonData!.data[i].name == "picture" {
@@ -46,8 +43,7 @@ class ViewModel {
             self.viewLabelText.value += " \(i+1).\(String(view![i]))"
         }
         
-        
-       
+
     }
     
     public func loadData() {

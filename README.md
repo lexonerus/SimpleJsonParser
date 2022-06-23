@@ -1,7 +1,7 @@
 # SimpleJsonParser
 Gingerbread Test
 
-![alt text](https://github.com/lexonerus/SimpleJsonParser/blob/main/gingerbread.png)
+![alt text](https://github.com/lexonerus/SimpleJsonParser/blob/main/gingerbread2.png)
 
 ## Задание:
 В качестве тестового задания предлагается создать небольшое приложение, позволяющее:

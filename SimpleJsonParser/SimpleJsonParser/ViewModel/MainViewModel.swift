@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class ViewModel {
+class MainViewModel {
     private let url = "https://pryaniky.com/static/json/sample.json"
     public var jsonData: Responce?
     var dataObject: [Responce.dataItem]?

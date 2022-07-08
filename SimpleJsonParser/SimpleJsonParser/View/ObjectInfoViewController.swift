@@ -8,12 +8,12 @@
 import Foundation
 import UIKit
 
-class ObjectInfoView: UIViewController {
+class ObjectInfoViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dataText: UITextView!
         
-    var viewModel: ViewModel?
+    var viewModel: MainViewModel?
     var indexPath: Int?
     var object: Responce.dataItem?
     

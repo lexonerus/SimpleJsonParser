@@ -7,12 +7,12 @@
 
 import UIKit
 
-class DetailView: UIViewController {
+class DetailViewController: UIViewController {
     
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var viewModel: ViewModel?
+    var viewModel: MainViewModel?
     var textForLabel = "Отображаем данные в следующем порядке: "
     
     override func viewDidLoad() {
@@ -30,14 +30,14 @@ class DetailView: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toObjectInfo") {
-            let nextViewController = segue.destination as! ObjectInfoView
+            let nextViewController = segue.destination as! ObjectInfoViewController
             nextViewController.viewModel = self.viewModel
         }
     }
     
 }
 
-extension DetailView: UITableViewDelegate, UITableViewDataSource {
+extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (viewModel?.jsonData?.view.count)!
     }

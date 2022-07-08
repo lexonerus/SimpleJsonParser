@@ -8,13 +8,13 @@
 import UIKit
 import Kingfisher
 
-class MainView: UIViewController {
+class MainViewController: UIViewController {
     
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var label: UILabel!
     
     var imageUrl = ""
-    var viewModel = ViewModel()
+    var viewModel = MainViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class MainView: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toDetailView") {
-            let nextViewController = segue.destination as! DetailView
+            let nextViewController = segue.destination as! DetailViewController
             nextViewController.viewModel = self.viewModel
         }
     }

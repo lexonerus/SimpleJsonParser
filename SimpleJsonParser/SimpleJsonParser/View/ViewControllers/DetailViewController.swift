@@ -27,13 +27,15 @@ class DetailViewController: UIViewController {
             self.detailLabel.text = self.textForLabel + self.viewModel!.viewLabelText.value
         }
     }
-    
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toObjectInfo") {
             let nextViewController = segue.destination as! ObjectInfoViewController
             nextViewController.viewModel = self.viewModel
+            
         }
     }
+    */
     
 }
 
@@ -52,8 +54,14 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(viewModel!.jsonData!.view[indexPath.row])
-        viewModel?.objectName = viewModel!.jsonData!.view[indexPath.row]
+        let objectName = viewModel!.jsonData!.view[indexPath.row]
+        print(objectName)
+        viewModel?.objectName = objectName
+        let nextViewController = ObjectInfoViewController()
+        nextViewController.viewModel = self.viewModel
+        nextViewController.setupViewElements(object: objectName)
+        
+        navigationController?.pushViewController(nextViewController, animated: true)
     }
     
     

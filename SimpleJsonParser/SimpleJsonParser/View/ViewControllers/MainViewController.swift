@@ -37,7 +37,6 @@ class MainViewController: UIViewController {
         viewModel.imageUrl.bind({ (imageUrl) in
             DispatchQueue.main.async {
                 let url = URL(string: imageUrl)
-                self.image.contentMode = .scaleToFill
                 self.image.kf.setImage(with: url)
             }
         })

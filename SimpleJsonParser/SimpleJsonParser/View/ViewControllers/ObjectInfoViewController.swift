@@ -25,10 +25,6 @@ class ObjectInfoViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
 
-        /*
-
-         */
-        //setup()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,9 +36,7 @@ class ObjectInfoViewController: UIViewController {
         let array = viewModel!.jsonData!.data
         
         if let i = array.firstIndex(where: { $0.name == name }) {
-            print("-----------------")
             self.item = array[i]
-            print(self.item)
         }
     }
     
@@ -50,17 +44,14 @@ class ObjectInfoViewController: UIViewController {
     func setupViewElements(object: String) {
         switch object {
         case "hz":
-            print("UI for hz")
             getElement(name: "hz")
             setupHzUi()
         case "selector":
-            print("UI for selector")
             getElement(name: "selector")
             setupSelectorUi()
         case "picture":
             getElement(name: "picture")
             setupPictureUi()
-            print("UI for picture")
         default:
             print("unkown object")
         }

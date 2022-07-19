@@ -27,15 +27,7 @@ class DetailViewController: UIViewController {
             self.detailLabel.text = self.textForLabel + self.viewModel!.viewLabelText.value
         }
     }
-    /*
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "toObjectInfo") {
-            let nextViewController = segue.destination as! ObjectInfoViewController
-            nextViewController.viewModel = self.viewModel
-            
-        }
-    }
-    */
+
     
 }
 

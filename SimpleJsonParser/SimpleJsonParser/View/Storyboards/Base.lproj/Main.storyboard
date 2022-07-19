@@ -184,22 +184,6 @@
             </objects>
             <point key="canvasLocation" x="1985" y="99"/>
         </scene>
-        <!--Data Object-->
-        <scene sceneID="Sy8-ic-i7g">
-            <objects>
-                <viewController id="xw5-T4-Vm8" customClass="ObjectInfoViewController" customModule="SimpleJsonParser" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="OY7-uY-0sd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="IDF-xa-Reu"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Data Object" id="NNT-mq-mcS"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Fz-hX-Ha9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2887" y="99"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="HCx-wm-Oix">
             <objects>
